@@ -19,7 +19,7 @@
 
 
 
-!\[Image](Image/ex.png)
+![Image](Image/ex.png)
 
 
 
@@ -78,7 +78,7 @@
 
 
 
-!\[Image](Image/z1.1.png)
+![Image](Image/z1.1.png)
 
 
 
