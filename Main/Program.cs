@@ -15,16 +15,16 @@ internal class Program
         Product products = new Product();
         StoreManager storeManager = new StoreManager();
 
-        //product.Add(products);
+        //list.Add(products);
 
         //StoreManager storeManager = new StoreManager();
-        //storeManager.GenBin(path, product);
-
+        //storeManager.GenBin(path, list);
+        Console.WriteLine("МАГАЗИН 'Местный'");
         while (loop)
         {
             Console.WriteLine("\nВведите цифры:\n1 - Показать всё\n2 - Добавить\n3 - Удалить");
-            Console.WriteLine("4 - Товары в наличии\n5 - Отсортировать по цене\n6 - Минимальная цена\n7 - Максимальная цена");
-            Console.WriteLine("0 - Завершение программы");
+            Console.WriteLine("4 - Товары в наличии\n5 - Отсортировать по цене\n6 - Минимальная цена");
+            Console.WriteLine("7 - Максимальная цена\n0 - Завершение программы");
             Console.Write("Ввод: ");
             x = Enter();
 
@@ -54,7 +54,7 @@ internal class Program
                     Console.Write("Введите категорию: ");
                     string category = Console.ReadLine();
                     Product newP = new Product(id, name, price, availability, category);
-
+                        
                     storeManager.AddProducts(list, newP);
                     storeManager.GenBin(path, list);
                     break;
@@ -82,7 +82,6 @@ internal class Program
                     {
                         Console.WriteLine(i);
                     }
-                    //storeManager.GenBin(path, list2);
                     break;
                 case 6:
                     list = storeManager.ReadBin(path);
@@ -97,7 +96,6 @@ internal class Program
             }
         }
     }
-
     private static int Enter()
     {
         int x;
