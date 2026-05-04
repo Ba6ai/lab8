@@ -1,4 +1,6 @@
-﻿namespace Main
+﻿using System.Linq;
+
+namespace Main
 {
     internal class StoreManager
     {
@@ -52,6 +54,36 @@
                 return null;
             }
             return products;
+        }
+
+        public List<Product> GetProducts(List<Product> products)
+        {
+            return products.Where(x => x.Availability == true).ToList();
+        }
+
+        public List<Product> GetSort(List<Product> products)
+        {
+            return products.OrderBy(x => x.Price).ToList();
+        }
+
+        public string GetMax(List<Product> products)
+        {
+            return products.Max(x => x.Price).ToString();
+        }
+
+        public string GetMin(List<Product> products)
+        {
+            return products.Min(x  => x.Price).ToString();
+        }
+
+        public void AddProducts(List<Product> products, Product item)
+        {
+            products.Add(item);
+        }
+
+        public void RemoveProducts(List<Product> products, int targetID)
+        {
+            products.RemoveAll(x => x.ID == targetID);
         }
     }
 }

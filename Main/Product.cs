@@ -2,11 +2,11 @@
 {
     internal class Product
     {
-        private int _id;
-        private string _name;
-        private float _price;
-        private bool _availability;
-        private string _category;
+        private int _id = 0;
+        private string _name = "0";
+        private int _price = 0;
+        private bool _availability = false;
+        private string _category = "0";
 
         public Product()
         {
@@ -16,7 +16,7 @@
             _availability = true;
             _category = "Выпечка";
         }
-        public Product(int id, string name, float price, bool availability, string category)
+        public Product(int id, string name, int price, bool availability, string category)
         {
             this._id = id;
             this._name = name;
@@ -54,7 +54,7 @@
                 _name = value;
             }
         }
-        public float Price
+        public int Price
         {
             get
             {
